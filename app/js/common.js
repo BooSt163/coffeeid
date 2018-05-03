@@ -31,8 +31,8 @@ $(function() {
 				items: 3
 			}
 		} 
-	}); 
-	
+	});  
+
 $(window).scroll(function(){
   var num = $(this)[0].pageYOffset;
 
@@ -81,8 +81,17 @@ $(window).innerWidth(function(){
         $('body,html').animate({scrollTop: top}, 500);
     });
     
-    $('.btn').click(function(){
+    $(document).on("click touchstart", "#btn", function(event) {
     	$('.description').toggleClass('description-open');
+    		if($('#desc-row').hasClass('desc-row-visible')){
+    		   	setTimeout(function() {
+    				$('.desc-row').removeClass('desc-row-visible');
+    	}, 100);
+    		}else{
+    			setTimeout(function() {
+    				$('.desc-row').addClass('desc-row-visible');
+    	}, 800);
+    		}    	
     });
 });
 

@@ -337,7 +337,8 @@ section
 	font-size: 25px
 		
 
-
+#my-content
+	margin-bottom: 30px
 .gallery
 	text-align: center
 	.h2
@@ -368,13 +369,25 @@ section
 	text-align: center
 	.row
 		justify-content: center
-		.btn
-			display: inline
-			border-bottom: 1px dotted $d
-			color: $d
-			cursor: pointer
+		.desc-row
+			display: none
+		.desc-row-visible
+			display: flex
+			width: 100%
+			margin-top: 30px
+			.desc-item
+				width: 300px
+				height: 180px
+				margin-right: 20px
+	#btn
+		cursor: pointer
+	.btn
+		display: inline
+		border-bottom: 1px dotted $d
+		color: $d
+		cursor: pointer
 .description-open
-	height: 300px
+	height: 870px
 
 .owl-carousel .owl-nav.disabled
 	display: flex
